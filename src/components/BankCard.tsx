@@ -10,11 +10,16 @@ interface BankCardProps {
 
 const BankCard = ({ bank, index }: BankCardProps) => {
   return (
-    <motion.div
+    <motion.a
+      href={bank.website}
+      target="_blank"
+      rel="noopener noreferrer"
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5, delay: index * 0.05 }}
-      className="bank-card group"
+      className="bank-card group cursor-pointer block hover:scale-105 hover:shadow-lg transition-all duration-300"
+      whileHover={{ y: -5 }}
+      whileTap={{ scale: 0.98 }}
     >
       <div className="flex justify-between items-start mb-3">
         <div>
@@ -26,15 +31,10 @@ const BankCard = ({ bank, index }: BankCardProps) => {
         </div>
       </div>
       
-      <a 
-        href={bank.website} 
-        target="_blank" 
-        rel="noopener noreferrer"
-        className="mt-2 text-sm text-primary hover:underline inline-block"
-      >
+      <div className="mt-2 text-sm text-primary group-hover:underline inline-block">
         Visit Official Website
-      </a>
-    </motion.div>
+      </div>
+    </motion.a>
   );
 };
 
