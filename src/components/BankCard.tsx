@@ -1,7 +1,8 @@
 
 import { motion } from 'framer-motion';
-import { ExternalLink, Globe } from 'lucide-react';
+import { ExternalLink, Globe, Percent } from 'lucide-react';
 import type { Bank } from '@/utils/bankData';
+import { getBankTaxRate } from '@/utils/bankUtils';
 
 interface BankCardProps {
   bank: Bank;
@@ -9,6 +10,8 @@ interface BankCardProps {
 }
 
 const BankCard = ({ bank, index }: BankCardProps) => {
+  const taxRate = getBankTaxRate(bank.id || bank.name);
+
   return (
     <motion.a
       href={bank.website}
@@ -17,7 +20,7 @@ const BankCard = ({ bank, index }: BankCardProps) => {
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5, delay: index * 0.05 }}
-      className="bank-card group cursor-pointer block hover:scale-105 hover:shadow-lg transition-all duration-300"
+      className="bank-card group cursor-pointer block hover:scale-105 hover:shadow-lg transition-all duration-300 bg-white p-4 rounded-lg"
       whileHover={{ y: -5 }}
       whileTap={{ scale: 0.98 }}
     >
@@ -34,8 +37,14 @@ const BankCard = ({ bank, index }: BankCardProps) => {
         </div>
       </div>
       
-      <div className="mt-2 text-sm text-primary group-hover:underline inline-block">
-        Visit Official Website
+      <div className="flex justify-between items-center">
+        <div className="mt-2 text-sm text-primary group-hover:underline inline-block">
+          Visit Official Website
+        </div>
+        <div className="flex items-center text-xs text-slate-500">
+          <Percent className="h-3 w-3 mr-1" />
+          <span>Tax: {taxRate}%</span>
+        </div>
       </div>
     </motion.a>
   );
