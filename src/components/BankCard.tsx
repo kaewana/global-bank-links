@@ -1,6 +1,6 @@
 
 import { motion } from 'framer-motion';
-import { ExternalLink } from 'lucide-react';
+import { ExternalLink, Globe } from 'lucide-react';
 import type { Bank } from '@/utils/bankData';
 
 interface BankCardProps {
@@ -24,7 +24,10 @@ const BankCard = ({ bank, index }: BankCardProps) => {
       <div className="flex justify-between items-start mb-3">
         <div>
           <h3 className="font-semibold text-lg">{bank.name}</h3>
-          <p className="text-sm text-slate-500">{bank.country}</p>
+          <div className="flex items-center text-sm text-slate-500 mt-1">
+            <Globe className="h-3 w-3 mr-1" />
+            <span>{bank.country}</span>
+          </div>
         </div>
         <div className="h-8 w-8 rounded-full flex items-center justify-center bg-slate-100 group-hover:bg-primary/10 transition-colors">
           <ExternalLink className="h-4 w-4 text-slate-400 group-hover:text-primary transition-colors" />

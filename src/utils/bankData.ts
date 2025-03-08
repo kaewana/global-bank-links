@@ -46,10 +46,17 @@ export const regions: Region[] = [
     image: 'https://images.unsplash.com/photo-1627823560969-b080d27cbcb4?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
   },
   {
-    id: 'middle-east-africa',
-    name: 'Middle East & Africa',
-    description: 'Financial institutions spanning Middle Eastern and African markets',
-    banksCount: 22,
+    id: 'africa',
+    name: 'Africa',
+    description: 'Leading financial institutions across East, West, North, and Southern Africa',
+    banksCount: 36,
+    image: 'https://images.unsplash.com/photo-1516026672322-bc52d61a55d5?q=80&w=1932&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
+  },
+  {
+    id: 'middle-east',
+    name: 'Middle East',
+    description: 'Financial institutions spanning Middle Eastern markets',
+    banksCount: 18,
     image: 'https://images.unsplash.com/photo-1606922625162-e2b0c2582010?q=80&w=1979&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
   }
 ];
@@ -85,11 +92,61 @@ export const banks: Bank[] = [
   { id: 'bancolombia', name: 'Bancolombia', country: 'Colombia', website: 'https://www.bancolombia.com', region: 'latin-america' },
   { id: 'banorte', name: 'Banorte', country: 'Mexico', website: 'https://www.banorte.com', region: 'latin-america' },
   
-  // Middle East & Africa
-  { id: 'emirates-nbd', name: 'Emirates NBD', country: 'UAE', website: 'https://www.emiratesnbd.com', region: 'middle-east-africa' },
-  { id: 'firstrand', name: 'FirstRand Bank', country: 'South Africa', website: 'https://www.firstrand.co.za', region: 'middle-east-africa' },
-  { id: 'national-bank-of-egypt', name: 'National Bank of Egypt', country: 'Egypt', website: 'https://www.nbe.com.eg', region: 'middle-east-africa' },
-  { id: 'qnb', name: 'Qatar National Bank', country: 'Qatar', website: 'https://www.qnb.com', region: 'middle-east-africa' }
+  // African Banks (New Addition)
+  { id: 'equity-bank', name: 'Equity Bank', country: 'Kenya', website: 'https://equitygroupholdings.com', region: 'africa' },
+  { id: 'kcb', name: 'Kenya Commercial Bank', country: 'Kenya', website: 'https://ke.kcbgroup.com', region: 'africa' },
+  { id: 'co-operative-bank', name: 'Co-operative Bank', country: 'Kenya', website: 'https://www.co-opbank.co.ke', region: 'africa' },
+  { id: 'stanbic-uganda', name: 'Stanbic Bank', country: 'Uganda', website: 'https://www.stanbicbank.co.ug', region: 'africa' },
+  { id: 'centenary-bank', name: 'Centenary Bank', country: 'Uganda', website: 'https://www.centenarybank.co.ug', region: 'africa' },
+  { id: 'dfcu', name: 'DFCU Bank', country: 'Uganda', website: 'https://www.dfcugroup.com', region: 'africa' },
+  { id: 'crdb-bank', name: 'CRDB Bank', country: 'Tanzania', website: 'https://www.crdbbank.co.tz', region: 'africa' },
+  { id: 'nmb-bank', name: 'NMB Bank', country: 'Tanzania', website: 'https://www.nmbbank.co.tz', region: 'africa' },
+  { id: 'first-bank', name: 'First Bank of Nigeria', country: 'Nigeria', website: 'https://www.firstbanknigeria.com', region: 'africa' },
+  { id: 'gtbank', name: 'Guaranty Trust Bank', country: 'Nigeria', website: 'https://www.gtbank.com', region: 'africa' },
+  { id: 'zenith-bank', name: 'Zenith Bank', country: 'Nigeria', website: 'https://www.zenithbank.com', region: 'africa' },
+  { id: 'access-bank', name: 'Access Bank', country: 'Nigeria', website: 'https://www.accessbankplc.com', region: 'africa' },
+  { id: 'premier-bank', name: 'Premier Bank', country: 'Somalia', website: 'https://www.premierbank.so', region: 'africa' },
+  { id: 'dahabshiil', name: 'Dahabshiil Bank', country: 'Somalia', website: 'https://www.dahabshiil.com', region: 'africa' },
+  { id: 'amal-bank', name: 'Amal Bank', country: 'Somalia', website: 'https://amalbank.so', region: 'africa' },
+  { id: 'cbe', name: 'Commercial Bank of Ethiopia', country: 'Ethiopia', website: 'https://www.combanketh.et', region: 'africa' },
+  { id: 'dashen-bank', name: 'Dashen Bank', country: 'Ethiopia', website: 'https://dashenbanksc.com', region: 'africa' },
+  { id: 'nbk', name: 'National Bank of Kenya', country: 'Kenya', website: 'https://www.nationalbank.co.ke', region: 'africa' },
+  { id: 'nbe', name: 'National Bank of Egypt', country: 'Egypt', website: 'https://www.nbe.com.eg', region: 'africa' },
+  { id: 'banque-misr', name: 'Banque Misr', country: 'Egypt', website: 'https://www.banquemisr.com', region: 'africa' },
+  { id: 'cib', name: 'Commercial International Bank', country: 'Egypt', website: 'https://www.cibeg.com', region: 'africa' },
+  { id: 'standard-bank', name: 'Standard Bank', country: 'South Africa', website: 'https://www.standardbank.co.za', region: 'africa' },
+  { id: 'firstrand', name: 'FirstRand Bank', country: 'South Africa', website: 'https://www.firstrand.co.za', region: 'africa' },
+  { id: 'absa', name: 'Absa Group', country: 'South Africa', website: 'https://www.absa.africa', region: 'africa' },
+  { id: 'nedbank', name: 'Nedbank', country: 'South Africa', website: 'https://www.nedbank.co.za', region: 'africa' },
+  { id: 'attijariwafa', name: 'Attijariwafa Bank', country: 'Morocco', website: 'https://www.attijariwafabank.com', region: 'africa' },
+  { id: 'banque-centrale-tunisie', name: 'Central Bank of Tunisia', country: 'Tunisia', website: 'https://www.bct.gov.tn', region: 'africa' },
+  { id: 'ecobank', name: 'Ecobank', country: 'Pan-African', website: 'https://www.ecobank.com', region: 'africa' },
+  { id: 'rawbank', name: 'Rawbank', country: 'DR Congo', website: 'https://www.rawbank.cd', region: 'africa' },
+  { id: 'bank-of-kigali', name: 'Bank of Kigali', country: 'Rwanda', website: 'https://www.bk.rw', region: 'africa' },
+  { id: 'standard-chartered-africa', name: 'Standard Chartered Africa', country: 'Pan-African', website: 'https://www.sc.com/africa', region: 'africa' },
+  { id: 'i-and-m', name: 'I&M Bank', country: 'East Africa', website: 'https://www.imbank.com', region: 'africa' },
+  { id: 'bank-of-ghana', name: 'Bank of Ghana', country: 'Ghana', website: 'https://www.bog.gov.gh', region: 'africa' },
+  { id: 'stanbic-ibtc', name: 'Stanbic IBTC', country: 'Nigeria', website: 'https://www.stanbicibtcbank.com', region: 'africa' },
+  
+  // Middle East Banks (Separated from Middle East & Africa region)
+  { id: 'emirates-nbd', name: 'Emirates NBD', country: 'UAE', website: 'https://www.emiratesnbd.com', region: 'middle-east' },
+  { id: 'qnb', name: 'Qatar National Bank', country: 'Qatar', website: 'https://www.qnb.com', region: 'middle-east' },
+  { id: 'saudi-national-bank', name: 'Saudi National Bank', country: 'Saudi Arabia', website: 'https://www.alahli.com', region: 'middle-east' },
+  { id: 'first-abu-dhabi', name: 'First Abu Dhabi Bank', country: 'UAE', website: 'https://www.bankfab.com', region: 'middle-east' },
+  { id: 'arab-bank', name: 'Arab Bank', country: 'Jordan', website: 'https://www.arabbank.com', region: 'middle-east' },
+  { id: 'bank-audi', name: 'Bank Audi', country: 'Lebanon', website: 'https://www.bankaudi.com.lb', region: 'middle-east' },
+  { id: 'mashreq', name: 'Mashreq Bank', country: 'UAE', website: 'https://www.mashreqbank.com', region: 'middle-east' },
+  { id: 'bank-muscat', name: 'Bank Muscat', country: 'Oman', website: 'https://www.bankmuscat.com', region: 'middle-east' },
+  { id: 'commercial-bank-qatar', name: 'Commercial Bank of Qatar', country: 'Qatar', website: 'https://www.cbq.qa', region: 'middle-east' },
+  { id: 'kfh', name: 'Kuwait Finance House', country: 'Kuwait', website: 'https://www.kfh.com', region: 'middle-east' },
+  { id: 'ahli-united', name: 'Ahli United Bank', country: 'Bahrain', website: 'https://www.ahliunited.com', region: 'middle-east' },
+  { id: 'riyad-bank', name: 'Riyad Bank', country: 'Saudi Arabia', website: 'https://www.riyadbank.com', region: 'middle-east' },
+  { id: 'nbk', name: 'National Bank of Kuwait', country: 'Kuwait', website: 'https://www.nbk.com', region: 'middle-east' },
+  { id: 'bank-dhofar', name: 'Bank Dhofar', country: 'Oman', website: 'https://www.bankdhofar.com', region: 'middle-east' },
+  { id: 'dubai-islamic-bank', name: 'Dubai Islamic Bank', country: 'UAE', website: 'https://www.dib.ae', region: 'middle-east' },
+  { id: 'arab-national-bank', name: 'Arab National Bank', country: 'Saudi Arabia', website: 'https://www.anb.com.sa', region: 'middle-east' },
+  { id: 'bankmed', name: 'BankMed', country: 'Lebanon', website: 'https://www.bankmed.com.lb', region: 'middle-east' },
+  { id: 'blom-bank', name: 'BLOM Bank', country: 'Lebanon', website: 'https://www.blombank.com', region: 'middle-east' }
 ];
 
 export const getBanksByRegion = (regionId: string): Bank[] => {
